@@ -34,8 +34,8 @@ EXPOSE 5002
 
 CMD ["tts-server", \
      "--model_name", "tts_models/multilingual/multi-dataset/your_tts", \
-     "--speaker_wav", "/app/voices/vendedor.wav", \
      "--port", "5002", \
      "--use_cuda", "true"]
+
 
 
