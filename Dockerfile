@@ -33,6 +33,7 @@ RUN pip install TTS==0.14.3
 EXPOSE 5002
 
 CMD ["tts-server", \
-     "--model_name", "tts_models/multilingual/multi-dataset/xtts_v2", \
+     "--model_name", "tts_models/multilingual/multi-dataset/xtts", \
      "--port", "5002", \
      "--use_cuda", "true"]
+
