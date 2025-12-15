@@ -20,7 +20,15 @@ RUN pip install torch==1.13.1+cu116 torchaudio==0.13.1+cu116 \
     --extra-index-url https://download.pytorch.org/whl/cu116
 
 # Coqui TTS (XTTS v2 compatível)
-RUN pip install TTS==0.14.3 fastapi uvicorn python-multipart numpy==1.23.5
+# numpy primeiro (compatível com torch 1.13.1)
+RUN pip install numpy==1.23.5
+
+# dependências web
+RUN pip install fastapi uvicorn python-multipart
+
+# Coqui TTS (XTTS v2)
+RUN pip install TTS==0.14.3
+
 
 EXPOSE 5002
 
