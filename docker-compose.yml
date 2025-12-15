@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  tts:
+    build: .
+    container_name: tts
+    runtime: nvidia
+    ports:
+      - 5002:5002
+    environment:
+      NVIDIA_VISIBLE_DEVICES: all
+      XTTS_SPEAKER_WAV: /app/voices/vendedor.wav
+    volumes:
+      - /tank/dados/llm-voip/tts/models:/root/.local/share/tts
+      - /tank/dados/llm-voip/tts/cache:/root/.cache
+      - /tank/dados/llm-voip/tts/output:/output
+      - /tank/dados/llm-voip/tts/voices:/app/voices:ro
