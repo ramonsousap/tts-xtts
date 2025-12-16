@@ -32,10 +32,11 @@ RUN pip install TTS==0.14.3
 
 EXPOSE 5002
 
-CMD ["tts-server", \
-     "--model_name", "tts_models/multilingual/multi-dataset/your_tts", \
-     "--port", "5002", \
-     "--use_cuda", "true"]
+WORKDIR /app
+COPY app /app
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5002"]
+
 
 
 
