@@ -35,7 +35,8 @@ EXPOSE 5002
 WORKDIR /app
 COPY app /app
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5002"]
+CMD ["python3", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5002"]
+
 
 
 
