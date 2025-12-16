@@ -23,6 +23,9 @@ RUN pip install torch==1.13.1+cu116 torchaudio==0.13.1+cu116 \
 # numpy primeiro (compatível com torch 1.13.1)
 RUN pip install numpy==1.23.5
 
+# dependências de áudio (OBRIGATÓRIO)
+RUN pip install soundfile scipy librosa
+
 # dependências web
 RUN pip install fastapi uvicorn python-multipart
 
