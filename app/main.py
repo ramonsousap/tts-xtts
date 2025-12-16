@@ -23,7 +23,7 @@ def synthesize(text: str):
             text=text,
             file_path=out,
             speaker="female-en-5",
-            language="pt"
+            language="pt-br"
         )
         return {"file": out}
     except Exception as e:
