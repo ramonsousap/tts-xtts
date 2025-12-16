@@ -22,7 +22,8 @@ def synthesize(text: str):
         tts.tts_to_file(
             text=text,
             file_path=out,
-            speaker="female-en-5"
+            speaker="female-en-5",
+            language="pt"
         )
         return {"file": out}
     except Exception as e:
